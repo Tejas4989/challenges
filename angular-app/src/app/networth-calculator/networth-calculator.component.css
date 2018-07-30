@@ -1,0 +1,27 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.row {
+  margin-top: 40px;
+  padding: 0 10px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.panel-heading div {
+  margin-top: -18px;
+  font-size: 15px;
+}
+
+.panel-heading div span {
+  margin-left: 5px;
+}
+
+.panel-body {
+  display: none;
+}
+
+.no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+}

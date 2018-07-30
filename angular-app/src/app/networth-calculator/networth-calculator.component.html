@@ -1,0 +1,156 @@
+<h2>Tracking your Networth </h2>
+
+<div class="col-sm-12">
+  <h4 class="col-sm-6">Net Worth : $ {{assetLiabilites.netWorth}}</h4>
+  <h4 class="col-sm-6">Currency : CAD</h4>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Assets</h3>
+      </div>
+      <table class="table table-hover" id="assets-table">
+        <thead>
+          <tr>
+            <th colspan="2">Cash And Investment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chequing</td>
+            <td>
+              <input type="number" [(ngModel)]="assetLiabilites.assets.cashAndInvestmentAssets.chequing"  name="chequing" class="form-control no-border" id="chequing">
+            </td>
+          </tr>
+          <tr>
+            <td>Saving For Taxes</td>
+            <td>
+              <input type="number" [(ngModel)]="assetLiabilites.assets.cashAndInvestmentAssets.savingsForTaxes"  name="savingsForTaxes" class="form-control no-border" id="savingsForTaxes" min="1" max="5000000">
+            </td>
+          </tr>
+          <tr>
+            <td>Rainy Day Fund</td>
+            <td>
+              <input type="number" [(ngModel)]="assetLiabilites.assets.cashAndInvestmentAssets.rainyDayFund"  name="rainyDayFund" class="form-control no-border" id="rainyDayFund">
+            </td>
+          </tr>
+          <tr>
+            <td>Saving For Travel</td>
+            <td>
+              <input type="number" [(ngModel)]="assetLiabilites.assets.cashAndInvestmentAssets.savingsForTravel"  name="savingsForTravel" class="form-control no-border" id="savingsForTravel">
+            </td>
+          </tr>
+          <tr>
+            <td>Savings For Personal Development</td>
+            <td>
+              <input type="number" [(ngModel)]="assetLiabilites.assets.cashAndInvestmentAssets.savingsForPD"  name="savingsForPD" class="form-control no-border" id="savingsForPD">
+            </td>
+          </tr>
+          <tr>
+            <td>Investment</td>
+            <td>
+              <input type="number" [(ngModel)]="assetLiabilites.assets.cashAndInvestmentAssets.investment1"  name="investment1" class="form-control no-border" id="investment1">
+            </td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th colspan="2">Long Term Assets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary Home</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.assets.longTermAssets.primaryHome"  name="primaryHome" class="form-control no-border" id="primaryHome"></td>
+          </tr>
+          <tr>
+            <td>Second Home</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.assets.longTermAssets.secondHome"  name="secondHome" class="form-control no-border" id="secondHome"></td>
+          </tr>
+          <tr>
+            <td>Others</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.assets.longTermAssets.other"  name="others" class="form-control no-border" id="others"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>Total Assets</td>
+            <td>$ {{assetLiabilites.assets.totalAssets}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Liabilities</h3>
+      </div>
+      <table class="table table-hover" id="liabilities-table">
+        <thead>
+          <tr>
+            <th colspan="2">Short Term Liabilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Credit Card 1</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.shortTermLiabilities.creditCard1"  name="creditCard1" class="form-control no-border" id="creditCard1"></td>
+          </tr>
+          <tr>
+            <td>Credit Card 2</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.shortTermLiabilities.creditCard2"  name="creditCard2" class="form-control no-border" id="creditCard2"></td>
+          </tr>
+          <tr>
+            <td>Others</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.shortTermLiabilities.others"  name="othersSTL" class="form-control no-border" id="othersSTL"></td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th colspan="2">Long Term Debt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mortgage 1</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.longTermDebts.mortgage1"  name="mortgage1" class="form-control no-border" id="mortgage1"></td>
+          </tr>
+          <tr>
+            <td>Mortgage 2</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.longTermDebts.mortgage2"  name="mortgage2" class="form-control no-border" id="mortgage2"></td>
+          </tr>
+          <tr>
+            <td>Line of Credit</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.longTermDebts.loc"  name="loc" class="form-control no-border" id="loc"></td>
+          </tr>
+          <tr>
+            <td>Investment Loan</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.longTermDebts.investmentLoan"  name="investmentLoan" class="form-control no-border" id="investmentLoan"></td>
+          </tr>
+          <tr>
+            <td>Student Loan</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.longTermDebts.studentLoan"  name="studentLoan" class="form-control no-border" id="studentLoan"></td>
+          </tr>
+          <tr>
+            <td>Car Loan</td>
+            <td><input type="number" [(ngModel)]="assetLiabilites.liabilities.longTermDebts.carLoan"  name="carLoan" class="form-control no-border" id="carLoan"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>Total Liabilities</td>
+            <td>$ {{assetLiabilites.liabilities.totalLiabilities}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="divider">
+   <button class="btn btn-success" (click)="calculateNetWorth()">Calculate Net Worth</button>
+</div>
+
+
